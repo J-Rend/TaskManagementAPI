@@ -1,7 +1,7 @@
 ﻿using MongoDB.Driver;
 using TaskManagement.Domain.Entities;
 
-namespace TaskManagement.Infrastructure.MongoDB;
+namespace TaskManagement.Infrastructure.MongoDB.Context;
 
 public interface IMongoDbContext
 {

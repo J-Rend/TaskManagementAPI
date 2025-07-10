@@ -1,4 +1,4 @@
-﻿using TaskManagement.Infrastructure.MongoDB;
+﻿using TaskManagement.Infrastructure.MongoDB.Context;
 
 namespace TaskManagement.Infrastructure.Repositories.MongoDB;
 

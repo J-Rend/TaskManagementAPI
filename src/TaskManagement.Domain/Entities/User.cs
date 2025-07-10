@@ -1,18 +1,20 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using TaskManagement.Domain.Entities.Base;
+using TaskManagement.Domain.Enums;
 
 namespace TaskManagement.Domain.Entities;
 
 public class User : Entity
 {
-    private User(string userName)
+    private User(string userName, UserRole userRole) : base()
     {
         Name = userName;
+        Role = userRole;
     }
 
-    public static User? Generate(string userName, out IEnumerable<ValidationResult> validationResults)
+    public static User? Generate(string userName, UserRole userRole, out IEnumerable<ValidationResult> validationResults)
     {
-        var user = new User(userName);
+        var user = new User(userName,userRole);
 
         validationResults = user.Validate();
 
@@ -32,4 +34,5 @@ public class User : Entity
     }
 
     public string Name { get; private set; }
+    public UserRole Role { get; private set; }
 }

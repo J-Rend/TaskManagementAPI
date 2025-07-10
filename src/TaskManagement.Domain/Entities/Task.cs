@@ -19,11 +19,11 @@ public class Task : Entity
     public Enums.TaskPriority Priority { get; private set; }
 
     [BsonRepresentation(BsonType.ObjectId)]
-    public ObjectId ProjectId { get; private set; }
+    public string ProjectId { get; private set; }
 
     public IEnumerable<TaskComment> Comments { get; private set; }
 
-    public IEnumerable<TaskChangeHistoryItem> ChangeHistory { get; private set; }
+    public IEnumerable<TaskChangeHistory> ChangeHistory { get; private set; }
 
     protected override IEnumerable<ValidationResult> Validate()
     {

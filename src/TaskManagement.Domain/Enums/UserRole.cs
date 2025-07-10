@@ -2,6 +2,6 @@
 
 public enum UserRole
 {
-    None = 0,
+    Default = 0,
     Manager = 1
 }

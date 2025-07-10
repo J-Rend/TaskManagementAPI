@@ -3,7 +3,7 @@ using MongoDB.Bson.Serialization.Attributes;
 
 namespace TaskManagement.Domain.ValueObjects;
 
-public class TaskChangeHistoryItem
+public class TaskChangeHistory
 {
     public string FieldName { get; private set; }
 
