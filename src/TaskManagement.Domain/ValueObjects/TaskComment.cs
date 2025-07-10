@@ -1,13 +1,16 @@
 ﻿using MongoDB.Bson;
+using MongoDB.Bson.Serialization.Attributes;
 
 namespace TaskManagement.Domain.ValueObjects;
 
 public class TaskComment
 {
-    public ObjectId UserId { get; private set; }
+    [BsonRepresentation(BsonType.ObjectId)]
+    public string UserId { get; private set; }
+
     public string Comment { get; private set; }
 
-    public TaskComment(ObjectId userId, string comment)
+    public TaskComment(string userId, string comment)
     {
         UserId = userId;
         Comment = comment;

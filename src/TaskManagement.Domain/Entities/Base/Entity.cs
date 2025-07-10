@@ -1,11 +1,14 @@
 ﻿using MongoDB.Bson;
+using MongoDB.Bson.Serialization.Attributes;
 using System.ComponentModel.DataAnnotations;
 
 namespace TaskManagement.Domain.Entities.Base;
 
 public abstract class Entity
 {
-    public ObjectId Id { get; private set; } 
+    [BsonId]
+    [BsonRepresentation(BsonType.ObjectId)]
+    public string Id { get; private set; } 
 
     public DateTime CreatedAt { get; private set; }
     public DateTime? UpdatedAt { get; private set; }
@@ -15,7 +18,6 @@ public abstract class Entity
 
     protected Entity()
     {
-        Id = ObjectId.GenerateNewId();
         CreatedAt = DateTime.UtcNow;
     }
 
