@@ -13,7 +13,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskManagement.Application"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeskManagement.Tests", "..\TeskManagement.Tests\TeskManagement.Tests.csproj", "{98ED8C7E-F561-4003-9A0A-5B995F9474B3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskManagement.CrossCutting", "..\TaskManagement.IoC\TaskManagement.CrossCutting.csproj", "{9C2F2DFE-7B03-4453-BA85-8751B6A481DF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskManagement.CrossCutting", "..\TaskManagement.CrossCutting\TaskManagement.CrossCutting.csproj", "{9C2F2DFE-7B03-4453-BA85-8751B6A481DF}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Others", "Others", "{00763D91-7591-489A-8636-C5CB1AE648F3}"
 	ProjectSection(SolutionItems) = preProject
