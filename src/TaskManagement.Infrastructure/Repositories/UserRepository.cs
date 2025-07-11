@@ -15,11 +15,11 @@ public class UserRepository : IUserRepository
         _mongoDbContext = mongoDbContext;
     }
 
-    public async Task<User> CreateAsync(User user)
+    public async Task<User> CreateAsync(User user, CancellationToken cancellationToken)
     {
         ArgumentNullException.ThrowIfNull(user);
 
-        await _mongoDbContext.Users.InsertOneAsync(user);
+        await _mongoDbContext.Users.InsertOneAsync(user,null,cancellationToken);
 
         return user;
     }

@@ -5,7 +5,7 @@ using TaskManagement.Domain.Interfaces.Repositories;
 
 namespace TaskManagement.Application.UseCases.CreateUser;
 
-public class CreateUserHandler : IUseCaseHandler<CreateUserInput, CreateUserOutput>
+public class CreateUserHandler : ICreateUserHandler
 {
     private readonly IUserRepository _userRepository;
 
@@ -16,7 +16,7 @@ public class CreateUserHandler : IUseCaseHandler<CreateUserInput, CreateUserOutp
         _userRepository = userRepository;
     }
 
-    public async Task<Result<CreateUserOutput>> ExecuteAsync(CreateUserInput input)
+    public async Task<Result<CreateUserOutput>> ExecuteAsync(CreateUserInput input, CancellationToken cancellationToken)
     {
         bool isRoleSuccessfullyParsed = Enum.TryParse(input.Role, out UserRole userRole);
 

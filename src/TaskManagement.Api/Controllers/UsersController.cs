@@ -3,6 +3,7 @@ using TaskManagement.Api.Controllers.Base;
 using TaskManagement.Api.Request.User;
 using TaskManagement.Application.UseCases;
 using TaskManagement.Application.UseCases.CreateUser;
+using TaskManagement.Application.UseCases.GetUserProjects;
 
 namespace TaskManagement.Api.Controllers;
 
@@ -18,17 +19,28 @@ public class UsersController : TaskManagementControllerBase
     /// <returns>A result indicating success or failure.</returns>
     [HttpPost]
     public async Task<IActionResult> CreateUser(
-        [FromServices] IUseCaseHandler<CreateUserInput, CreateUserOutput> useCaseHandler,
-        [FromBody] CreateUserRequest request
+        [FromServices] ICreateUserHandler useCaseHandler,
+        [FromBody] CreateUserRequest request,
+        CancellationToken cancellationToken
         )
     {
-        var input = new CreateUserInput
-        {
-            Name = request.Name,
-            Role = request.Role
-        };
+        var input = new CreateUserInput(request.Name, request.Role);
 
-        var result = await useCaseHandler.ExecuteAsync(input);
+        var result = await useCaseHandler.ExecuteAsync(input,cancellationToken);
+
+        return SendResponse(result);
+    }
+
+    [HttpGet("{userId}/projects")]
+    public async Task<IActionResult> GetUserProjects(
+        [FromServices] IGetUserProjectsHandler useCaseHandler,
+        [FromRoute] string userId,
+        CancellationToken cancellationToken
+        )
+    {
+        var input = new GetUserProjectsInput(userId);
+
+        var result = await useCaseHandler.ExecuteAsync(input, cancellationToken);
 
         return SendResponse(result);
     }

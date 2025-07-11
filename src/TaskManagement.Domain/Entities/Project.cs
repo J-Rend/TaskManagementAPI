@@ -16,6 +16,27 @@ public class Project : Entity
     [BsonRepresentation(BsonType.ObjectId)]
     public string ResponsibleUserId { get; private set; }
 
+    private Project(string title, string? description, DateTime? removedAt, string responsibleUserId)
+    {
+        Title = title;
+        Description = description;
+        RemovedAt = removedAt;
+        ResponsibleUserId = responsibleUserId;
+    }
+
+    public static Project? Generate(string title, string? description, DateTime? removedAt, string responsibleUserId, out IEnumerable<ValidationResult> validationResults)
+    {
+        var project = new Project(title, description, removedAt, responsibleUserId);
+
+        validationResults = project.Validate();
+
+        if (validationResults.Any())
+        {
+            return null;
+        }
+
+        return project;
+    }
 
     protected override IEnumerable<ValidationResult> Validate()
     {

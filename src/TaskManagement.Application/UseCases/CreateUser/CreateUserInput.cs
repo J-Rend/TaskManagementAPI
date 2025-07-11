@@ -2,6 +2,13 @@
 
 public class CreateUserInput
 {
-    public string Name { get; set; } = string.Empty;
-    public string Role { get; set; } = string.Empty;
+    public string Name { get; private set; }
+    public string Role { get; private set; }
+
+    public CreateUserInput(string name, string role)
+    {
+        Name = name;
+        Role = role;
+    }
+
 }

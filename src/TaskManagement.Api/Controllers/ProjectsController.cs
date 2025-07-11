@@ -1,6 +1,11 @@
-﻿namespace TaskManagement.Api.Controllers
+﻿using Microsoft.AspNetCore.Mvc;
+using TaskManagement.Api.Controllers.Base;
+
+namespace TaskManagement.Api.Controllers
 {
-    public class ProjectsController
+    [ApiController]
+    [Route("api/[controller]")]
+    public class ProjectsController : TaskManagementControllerBase
     {
     }
 }
