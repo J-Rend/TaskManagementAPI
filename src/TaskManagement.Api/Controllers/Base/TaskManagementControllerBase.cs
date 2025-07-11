@@ -11,12 +11,16 @@ public abstract class TaskManagementControllerBase : ControllerBase
         {
             case ResultStatus.Success:
                 return Ok(result.Data);
+            case ResultStatus.Created:
+                return Created(result.ResourcePath, result.Data);
+            case ResultStatus.NoContent:
+                return NoContent();
             case ResultStatus.NotFound:
                 return NotFound();
             case ResultStatus.ClientError:
                 return BadRequest(result.Errors);
             case ResultStatus.ServerError:
-                return StatusCode(500, result.ErrorMessage);
+                return StatusCode(500, result.ServerErrorMessage);
             default:
                 return StatusCode(500, "An unexpected error occurred.");
         }

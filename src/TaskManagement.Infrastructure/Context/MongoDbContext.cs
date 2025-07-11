@@ -1,8 +1,12 @@
 ﻿using Microsoft.Extensions.Options;
 using MongoDB.Driver;
+using System.Diagnostics.CodeAnalysis;
+using TaskManagement.Domain.Entities.External;
+using TaskManagement.Domain.Entities.Internal;
 
 namespace TaskManagement.Infrastructure.MongoDB.Context;
 
+[ExcludeFromCodeCoverage]
 public class MongoDbContext : IMongoDbContext
 {
     private readonly IMongoDatabase _database;
@@ -13,9 +17,9 @@ public class MongoDbContext : IMongoDbContext
         _database = client.GetDatabase(options.Value.DatabaseName);
     }
 
-    public IMongoCollection<Domain.Entities.Project> Projects => _database.GetCollection<Domain.Entities.Project>("Users");
+    public IMongoCollection<Project> Projects => _database.GetCollection<Project>("Users");
 
-    public IMongoCollection<Domain.Entities.User> Users => _database.GetCollection<Domain.Entities.User>("Users");
+    public IMongoCollection<User> Users => _database.GetCollection<User>("Users");
 
-    public IMongoCollection<Domain.Entities.Task> Tasks => _database.GetCollection<Domain.Entities.Task>("Tasks");
+    public IMongoCollection<Domain.Entities.Internal.Task> Tasks => _database.GetCollection<Domain.Entities.Internal.Task>("Tasks");
 }

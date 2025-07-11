@@ -16,8 +16,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\TaskManagement.Application\TaskManagement.Application.csproj" />
+    <ProjectReference Include="..\TaskManagement.CrossCutting\TaskManagement.CrossCutting.csproj" />
     <ProjectReference Include="..\TaskManagement.Infrastructure\TaskManagement.Infrastructure.MongoDB.csproj" />
-    <ProjectReference Include="..\TaskManagement.IoC\TaskManagement.CrossCutting.csproj" />
   </ItemGroup>
 
 </Project>

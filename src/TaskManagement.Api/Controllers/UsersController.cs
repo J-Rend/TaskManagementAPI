@@ -1,35 +1,15 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using System.Diagnostics.CodeAnalysis;
 using TaskManagement.Api.Controllers.Base;
-using TaskManagement.Api.Request.User;
-using TaskManagement.Application.UseCases.CreateUser;
-using TaskManagement.Application.UseCases.GetUserProjects;
+using TaskManagement.Application.UseCases.Project.GetUserProjects;
 
 namespace TaskManagement.Api.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
+[ExcludeFromCodeCoverage]
 public class UsersController : TaskManagementControllerBase
 {
-    /// <summary>
-    /// Creates a new user.
-    /// Available roles: Default, Manager
-    /// </summary>
-    /// <param name="request">The request containing user details.</param>
-    /// <returns>A result indicating success or failure.</returns>
-    [HttpPost]
-    public async Task<IActionResult> CreateUser(
-        [FromServices] ICreateUserHandler useCaseHandler,
-        [FromBody] CreateUserRequest request,
-        CancellationToken cancellationToken
-        )
-    {
-        var input = new CreateUserInput(request.Name, request.Role);
-
-        var result = await useCaseHandler.ExecuteAsync(input,cancellationToken);
-
-        return SendResponse(result);
-    }
-
     [HttpGet("{userId}/projects")]
     public async Task<IActionResult> GetUserProjects(
         [FromServices] IGetUserProjectsHandler useCaseHandler,

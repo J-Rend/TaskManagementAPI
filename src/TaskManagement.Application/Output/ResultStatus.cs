@@ -3,7 +3,9 @@
 public enum ResultStatus
 {
     Success = 1,
-    ClientError = 2,
-    ServerError = 3,
-    NotFound = 4
+    Created = 2,
+    NoContent = 3,
+    ClientError = 4,
+    ServerError = 5,
+    NotFound = 6
 }

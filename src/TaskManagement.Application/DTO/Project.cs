@@ -2,20 +2,20 @@
 
 public class Project
 {
-    public string Title { get; private set; }
+    public string? Title { get; private set; }
 
     public string? Description { get; private set; }
 
     public DateTime? RemovedAt { get; private set; }
 
-    public string ResponsibleUserId { get; private set; }
+    public string UserId { get; private set; }
 
-    public Project(Domain.Entities.Project project)
+    public Project(Domain.Entities.Internal.Project project)
     {
         Title = project.Title;
         Description = project.Description;
         RemovedAt = project.RemovedAt;
-        ResponsibleUserId = project.ResponsibleUserId;
+        UserId = project.UserId;
     }
 
 }

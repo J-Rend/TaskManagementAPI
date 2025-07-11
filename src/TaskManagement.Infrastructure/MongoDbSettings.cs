@@ -1,5 +1,8 @@
-﻿namespace TaskManagement.Infrastructure.MongoDB;
+﻿using System.Diagnostics.CodeAnalysis;
 
+namespace TaskManagement.Infrastructure.MongoDB;
+
+[ExcludeFromCodeCoverage]
 public class MongoDbSettings
 {
     public string ConnectionString { get; set; }
