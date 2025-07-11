@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using TaskManagement.Api.Controllers.Base;
 using TaskManagement.Api.Request.User;
-using TaskManagement.Application.UseCases;
 using TaskManagement.Application.UseCases.CreateUser;
 using TaskManagement.Application.UseCases.GetUserProjects;
 
