@@ -26,6 +26,7 @@ public class CreateProjectHandler : ICreateProjectHandler
 
         if (project is null)
         {
+            //TODO: TEST
             return Result<CreateProjectOutput>.ClientError(validationResults);
         }
 
@@ -33,8 +34,9 @@ public class CreateProjectHandler : ICreateProjectHandler
 
         var output = new CreateProjectOutput(new(project));
 
-        var uri = $"/api/projects/{project.Id}";
+        var uri = $"/api/projects/{project?.Id}";
 
+        //TODO: TEST
         return Result<CreateProjectOutput>.Created(output, uri);
     }
 }

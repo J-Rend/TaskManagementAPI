@@ -14,7 +14,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\TaskManagement.Application\TaskManagement.Application.csproj" />
-    <ProjectReference Include="..\TaskManagement.Infrastructure\TaskManagement.Infrastructure.MongoDB.csproj" />
+    <ProjectReference Include="..\TaskManagement.Infrastructure.MongoDB\TaskManagement.Infrastructure.MongoDB.csproj" />
   </ItemGroup>
 
 </Project>

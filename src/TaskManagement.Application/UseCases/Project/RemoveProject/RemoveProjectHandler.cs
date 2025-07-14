@@ -26,7 +26,7 @@ public class RemoveProjectHandler : IRemoveProjectHandler
             return Result<RemoveProjectOutput>.NotFound();
         }
 
-        var projectTasks = await _taskRepository.GetTasksByProject(input.ProjectId, cancellationToken);
+        var projectTasks = await _taskRepository.GetTasksByProjectAsync(input.ProjectId, cancellationToken);
 
         var pendingTasks = projectTasks
                             .Where(t => t.Status == Domain.Enums.TaskStatus.Pending)

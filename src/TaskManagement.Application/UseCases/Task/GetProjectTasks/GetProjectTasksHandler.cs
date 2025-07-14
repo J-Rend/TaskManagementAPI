@@ -16,12 +16,13 @@ public class GetProjectTasksHandler : IGetProjectTasksHandler
 
     public async Task<Result<GetProjectTasksOutput>> ExecuteAsync(GetProjectTasksInput input, CancellationToken cancellationToken)
     {
-        var tasks = await _taskRepository.GetTasksByProject(input.ProjectId, cancellationToken);
+        var tasks = await _taskRepository.GetTasksByProjectAsync(input.ProjectId, cancellationToken);
 
         var tasksDto = tasks.Select(t => new DTO.Task(t));
 
         var output = new GetProjectTasksOutput(input.ProjectId, tasksDto);
 
+        //TODO: TEST
         return Result<GetProjectTasksOutput>.Success(output);
     }
 }

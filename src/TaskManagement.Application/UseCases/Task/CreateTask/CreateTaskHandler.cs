@@ -29,15 +29,17 @@ public class CreateTaskHandler : ICreateTaskHandler
 
         if (task is null)
         {
+            //TODO: TEST
             return Result<CreateTaskOutput>.ClientError(validationResults);
         }
 
         if (!string.IsNullOrWhiteSpace(input.ProjectId))
         {
-            var tasksByProject = await _taskRepository.GetTasksByProject(input.ProjectId, cancellationToken);
+            var tasksQuantityByProject = await _taskRepository.CountTasksByProjectAsync(input.ProjectId, cancellationToken);
 
-            if (tasksByProject.Count() >= MAX_TASKS_PER_PROJECT)
+            if (tasksQuantityByProject >= MAX_TASKS_PER_PROJECT)
             {
+                //TODO: TEST
                 string errorMessage = $"It's not possible to add more tasks to this project. It exceeds the limit of {MAX_TASKS_PER_PROJECT} tasks.";
 
                 return Result<CreateTaskOutput>.ClientError([new(errorMessage)]);
@@ -48,8 +50,9 @@ public class CreateTaskHandler : ICreateTaskHandler
 
         var output = new CreateTaskOutput(new(task));
 
-        var resourcePath = $"/api/tasks/{task.Id}";
+        var resourcePath = $"/api/tasks/{task?.Id}";
 
+        //TODO: TEST
         return Result<CreateTaskOutput>.Created(output, resourcePath);
     }
 }

@@ -7,11 +7,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TaskManagement.Api", "TaskM
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TaskManagement.Domain", "..\TaskManagement.Domain\TaskManagement.Domain.csproj", "{3CD5F1B5-16C0-4E64-9AE7-188DF6C1FAF2}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TaskManagement.Infrastructure.MongoDB", "..\TaskManagement.Infrastructure\TaskManagement.Infrastructure.MongoDB.csproj", "{B4E57EF8-CBFA-4076-8A1B-4951BFE9CB36}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TaskManagement.Infrastructure.MongoDB", "..\TaskManagement.Infrastructure.MongoDB\TaskManagement.Infrastructure.MongoDB.csproj", "{B4E57EF8-CBFA-4076-8A1B-4951BFE9CB36}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TaskManagement.Application", "..\TaskManagement.Application\TaskManagement.Application.csproj", "{375F13DE-A2D3-405F-A9D8-717541FB3564}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TaskManagement.Tests", "..\TeskManagement.Tests\TaskManagement.Tests.csproj", "{98ED8C7E-F561-4003-9A0A-5B995F9474B3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TaskManagement.Tests", "..\TaskManagement.Tests\TaskManagement.Tests.csproj", "{98ED8C7E-F561-4003-9A0A-5B995F9474B3}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TaskManagement.CrossCutting", "..\TaskManagement.CrossCutting\TaskManagement.CrossCutting.csproj", "{9C2F2DFE-7B03-4453-BA85-8751B6A481DF}"
 EndProject
