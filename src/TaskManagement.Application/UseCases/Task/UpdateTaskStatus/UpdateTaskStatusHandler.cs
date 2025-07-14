@@ -26,7 +26,7 @@ public class UpdateTaskStatusHandler : IUpdateTaskStatusHandler
 
         if (task is null)
         {
-            //TODO: TEST
+            
             return Result<UpdateTaskStatusOutput>.NotFound();
         }
 
@@ -34,13 +34,13 @@ public class UpdateTaskStatusHandler : IUpdateTaskStatusHandler
 
         if (validationResults.Any())
         {
-            //TODO: TEST
+            
             return Result<UpdateTaskStatusOutput>.ClientError(validationResults);
         }
 
         await _taskRepository.UpdateAsync(task, cancellationToken);
 
-        //TODO: TEST
+        
         return Result<UpdateTaskStatusOutput>.NoContent();
     }
 }

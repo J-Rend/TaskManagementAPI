@@ -1,6 +1,6 @@
 ﻿namespace TaskManagement.Application.UseCases.Task.GetProjectTasks;
 
-public class GetProjectTasksInput
+public sealed class GetProjectTasksInput
 {
     public GetProjectTasksInput(string projectId)
     {

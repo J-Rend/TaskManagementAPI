@@ -15,6 +15,7 @@
   <ItemGroup>
     <ProjectReference Include="..\TaskManagement.Application\TaskManagement.Application.csproj" />
     <ProjectReference Include="..\TaskManagement.Infrastructure.MongoDB\TaskManagement.Infrastructure.MongoDB.csproj" />
+    <ProjectReference Include="..\TaskManagement.Infrastructure.Permissioning\TaskManagement.Infrastructure.Permissioning.csproj" />
   </ItemGroup>
 
 </Project>

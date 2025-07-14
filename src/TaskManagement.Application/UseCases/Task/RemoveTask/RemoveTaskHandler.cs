@@ -26,7 +26,7 @@ public class RemoveTaskHandler : IRemoveTaskHandler
 
         if (task is null)
         {
-            //TODO: TEST
+            
             return Result<RemoveTaskOutput>.NotFound();
         }
 
@@ -34,7 +34,7 @@ public class RemoveTaskHandler : IRemoveTaskHandler
 
         await _taskRepository.UpdateAsync(task, cancellationToken);
 
-        //TODO: TEST
+        
         return Result<RemoveTaskOutput>.NoContent();
     }
 }

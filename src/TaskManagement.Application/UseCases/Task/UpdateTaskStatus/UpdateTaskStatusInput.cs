@@ -1,6 +1,6 @@
 ﻿namespace TaskManagement.Application.UseCases.Task.UpdateTaskStatus;
 
-public class UpdateTaskStatusInput
+public sealed class UpdateTaskStatusInput
 {
     public string TaskId { get; private set; }
 

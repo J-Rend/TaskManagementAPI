@@ -1,6 +1,6 @@
 ﻿namespace TaskManagement.Application.UseCases.Task.UpdateTaskComments;
 
-public class UpdateTaskCommentsInput
+public sealed class UpdateTaskCommentsInput
 {
     public string TaskId { get; private set; }
 

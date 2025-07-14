@@ -11,7 +11,9 @@ public static class DependencyResolver
 {
     public static IServiceCollection ConfigureDependencies(this IServiceCollection services, IConfiguration configuration)
     {
-        services.ConfigureMongoDb(configuration);
+        services.ConfigureDatabaseInfrastructureDependencies(configuration);
+
+        services.ConfigureAuthenticationInfrastructureDependencies();
 
         services.ConfigureApplicationDependencies();
 

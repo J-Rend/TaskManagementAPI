@@ -27,7 +27,7 @@ public class UpdateTaskCommentsHandler : IUpdateTaskCommentsHandler
 
         if (task is null)
         {
-            //TODO: TEST
+            
             return Result<UpdateTaskCommentsOutput>.NotFound();
         }
 
@@ -37,7 +37,7 @@ public class UpdateTaskCommentsHandler : IUpdateTaskCommentsHandler
 
         await _taskRepository.UpdateAsync(task, cancellationToken);
 
-        //TODO: TEST
+        
         return Result<UpdateTaskCommentsOutput>.NoContent();
     }
 }

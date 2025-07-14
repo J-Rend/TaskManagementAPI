@@ -3,6 +3,6 @@
 namespace TaskManagement.Application.UseCases.Task.RemoveTask;
 
 [ExcludeFromCodeCoverage]
-public class RemoveTaskOutput
+public sealed class RemoveTaskOutput
 {
 }

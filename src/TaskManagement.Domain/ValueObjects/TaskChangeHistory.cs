@@ -2,7 +2,7 @@
 
 public class TaskChangeHistory
 {
-    public TaskChangeHistory(string fieldName, DateTime changedAt, string modifiedBy, object? oldValue, object? newValue)
+    public TaskChangeHistory(string fieldName, DateTime changedAt, string modifiedBy, string? oldValue, string? newValue)
     {
         FieldName = fieldName;
         ChangedAt = changedAt;
@@ -17,8 +17,8 @@ public class TaskChangeHistory
 
     public string ModifiedBy { get; private set; }
 
-    public object? OldValue { get; private set; }
+    public string? OldValue { get; private set; }
 
-    public object? NewValue { get; private set; }
+    public string? NewValue { get; private set; }
 
 }

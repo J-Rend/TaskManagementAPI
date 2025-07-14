@@ -1,6 +1,6 @@
 ﻿namespace TaskManagement.Application.UseCases.Task.GetProjectTasks;
 
-public class GetProjectTasksOutput
+public sealed class GetProjectTasksOutput
 {
     public string ProjectId { get; private set; }
     public IEnumerable<DTO.Task> Tasks { get; private set; }

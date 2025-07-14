@@ -22,7 +22,7 @@ public class GetProjectTasksHandler : IGetProjectTasksHandler
 
         var output = new GetProjectTasksOutput(input.ProjectId, tasksDto);
 
-        //TODO: TEST
+        
         return Result<GetProjectTasksOutput>.Success(output);
     }
 }

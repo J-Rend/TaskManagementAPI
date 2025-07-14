@@ -1,6 +1,6 @@
 ﻿namespace TaskManagement.Application.UseCases.Project.CreateProject;
 
-public class CreateProjectOutput
+public sealed class CreateProjectOutput
 {
     public CreateProjectOutput(DTO.Project project)
     {

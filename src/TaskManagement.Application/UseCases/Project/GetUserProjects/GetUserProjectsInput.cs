@@ -1,6 +1,6 @@
 ﻿namespace TaskManagement.Application.UseCases.Project.GetUserProjects;
 
-public class GetUserProjectsInput
+public sealed class GetUserProjectsInput
 {
     public string UserId { get; private set; }
 

@@ -1,6 +1,6 @@
 ﻿namespace TaskManagement.Application.UseCases.Project.CreateProject;
 
-public class CreateProjectInput
+public sealed class CreateProjectInput
 {
     public CreateProjectInput(string? title, string? description)
     {

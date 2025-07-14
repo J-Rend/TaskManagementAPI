@@ -19,9 +19,19 @@ public class TaskRepository : ITaskRepository
 
     public async Task<IEnumerable<Domain.Entities.Internal.Task>> GetTasksByProjectAsync(string projectId, CancellationToken cancellationToken)
     {
-        return await _mongoDbContext.Tasks
+        return await _mongoDbContext
+                    .Tasks
                     .Find(task => task.ProjectId == projectId)
                     .ToListAsync(cancellationToken);
+    }
+
+    public async Task<IEnumerable<Domain.Entities.Internal.Task>> GetTasksByProjectListAsync(IEnumerable<string> projectIds, CancellationToken cancellationToken)
+    {
+        var filter = Builders<Domain.Entities.Internal.Task>.Filter.In(t => t.ProjectId, projectIds);
+
+        var tasks = await _mongoDbContext.Tasks.Find(filter).ToListAsync(cancellationToken);
+
+        return tasks;
     }
 
     public async Task<long> CountTasksByProjectAsync(string projectId, CancellationToken cancellationToken)

@@ -19,6 +19,7 @@ public class ProjectTest
         var dto = new TaskManagement.Application.DTO.Project(project!);
 
         // Assert
+        Assert.Equal(project?.Id, dto.Id);
         Assert.Equal("Test Project", dto.Title);
         Assert.Equal("This is a test project.", dto.Description);
         Assert.Null(dto.RemovedAt);

@@ -1,6 +1,6 @@
 ﻿namespace TaskManagement.Application.UseCases.Task.RemoveTask;
 
-public class RemoveTaskInput
+public sealed class RemoveTaskInput
 {
     public string TaskId { get; private set; }
 

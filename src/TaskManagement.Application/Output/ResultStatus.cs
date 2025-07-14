@@ -7,5 +7,6 @@ public enum ResultStatus
     NoContent = 3,
     ClientError = 4,
     ServerError = 5,
-    NotFound = 6
+    NotFound = 6,
+    Forbidden = 7
 }

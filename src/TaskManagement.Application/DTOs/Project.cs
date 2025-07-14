@@ -2,6 +2,7 @@
 
 public class Project
 {
+    public string? Id { get; private set; }
     public string? Title { get; private set; }
 
     public string? Description { get; private set; }
@@ -12,6 +13,7 @@ public class Project
 
     public Project(Domain.Entities.Internal.Project project)
     {
+        Id = project.Id;
         Title = project.Title;
         Description = project.Description;
         RemovedAt = project.RemovedAt;

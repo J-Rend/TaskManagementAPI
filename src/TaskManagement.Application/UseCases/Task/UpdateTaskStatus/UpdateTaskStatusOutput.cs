@@ -3,6 +3,6 @@
 namespace TaskManagement.Application.UseCases.Task.UpdateTaskStatus;
 
 [ExcludeFromCodeCoverage]
-public class UpdateTaskStatusOutput
+public sealed class UpdateTaskStatusOutput
 {
 }

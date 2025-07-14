@@ -1,6 +1,6 @@
 ﻿namespace TaskManagement.Application.UseCases.Task.CreateTask;
 
-public class CreateTaskInput
+public sealed class CreateTaskInput
 {
     public CreateTaskInput(string title, string description, DateTime dueDate, string status, string priority, string? projectId)
     {

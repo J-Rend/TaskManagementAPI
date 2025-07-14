@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using TaskManagement.Application.Output;
-using TeskManagement.Tests.TestModels;
+using TaskManagement.Tests.Api;
 
 namespace TeskManagement.Tests.Api;
 

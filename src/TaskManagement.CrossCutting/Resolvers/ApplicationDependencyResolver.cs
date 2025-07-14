@@ -3,6 +3,7 @@ using System.Diagnostics.CodeAnalysis;
 using TaskManagement.Application.UseCases.Project.CreateProject;
 using TaskManagement.Application.UseCases.Project.GetUserProjects;
 using TaskManagement.Application.UseCases.Project.RemoveProject;
+using TaskManagement.Application.UseCases.Reports.TaskReportByUser;
 using TaskManagement.Application.UseCases.Task.CreateTask;
 using TaskManagement.Application.UseCases.Task.GetProjectTasks;
 using TaskManagement.Application.UseCases.Task.RemoveTask;
@@ -25,6 +26,8 @@ public static class ApplicationDependencyResolver
         services.AddScoped<IRemoveTaskHandler, RemoveTaskHandler>();
         services.AddScoped<IUpdateTaskCommentsHandler, UpdateTaskCommentsHandler>();
         services.AddScoped<IUpdateTaskStatusHandler, UpdateTaskStatusHandler>();
+
+        services.AddScoped<ITaskReportByUserHandler, TaskReportByUserHandler>();
 
         return services;
     }

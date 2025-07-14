@@ -1,6 +1,6 @@
 ﻿namespace TaskManagement.Application.UseCases.Task.CreateTask;
 
-public class CreateTaskOutput
+public sealed class CreateTaskOutput
 {
     public CreateTaskOutput(DTO.Task task)
     {

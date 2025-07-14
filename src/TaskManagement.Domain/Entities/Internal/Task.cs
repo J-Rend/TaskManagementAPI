@@ -1,6 +1,7 @@
 ﻿using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
 using System.ComponentModel.DataAnnotations;
+using System.Text.Json;
 using TaskManagement.Domain.Entities.Internal.Base;
 using TaskManagement.Domain.Enums;
 using TaskManagement.Domain.ValueObjects;
@@ -76,10 +77,12 @@ public class Task : Entity
     public void AppendComment(TaskComment comment)
     {
         var oldValue = Comments.ToList();
-
         Comments = Comments.Append(comment);
 
-        AddChangeHistory(new("Comments", DateTime.Now, comment.UserId, oldValue, Comments));
+        var serializedOldValue = JsonSerializer.Serialize(oldValue);
+        var serializedNewValue = JsonSerializer.Serialize(Comments);
+
+        AddChangeHistory(new("Comments", DateTime.Now, comment.UserId, serializedOldValue, serializedNewValue));
         Update();
     }
 
@@ -97,7 +100,7 @@ public class Task : Entity
             taskStatus = Enums.TaskStatus.None;
         }
 
-        AddChangeHistory(new("Status", DateTime.Now, userId, Status, taskStatus));
+        AddChangeHistory(new("Status", DateTime.Now, userId, Status.ToString(), taskStatus.ToString()));
 
         Status = taskStatus;
 

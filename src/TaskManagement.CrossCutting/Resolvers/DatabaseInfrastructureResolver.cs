@@ -9,9 +9,17 @@ using TaskManagement.Infrastructure.Repositories.MongoDB;
 namespace TaskManagement.CrossCutting.Resolvers;
 
 [ExcludeFromCodeCoverage]
-public static class MongoDbInfrastructureResolver
+public static class DatabaseInfrastructureResolver
 {
-    public static IServiceCollection ConfigureMongoDb(this IServiceCollection services, IConfiguration configuration)
+    public static IServiceCollection ConfigureDatabaseInfrastructureDependencies(this IServiceCollection services, IConfiguration configuration)
+    {
+        services.ConfigureMongoDb(configuration);
+        services.ConfigureRepositories();
+
+        return services;
+    }
+
+    private static IServiceCollection ConfigureMongoDb(this IServiceCollection services, IConfiguration configuration)
     {
         services.Configure<MongoDbSettings>(configuration.GetSection("MongoDbSettings"));
         services.AddSingleton<IMongoDbContext, MongoDbContext>();

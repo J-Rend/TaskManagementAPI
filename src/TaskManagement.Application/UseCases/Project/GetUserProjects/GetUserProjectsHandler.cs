@@ -22,7 +22,7 @@ public class GetUserProjectsHandler : IGetUserProjectsHandler
 
         var output = new GetUserProjectsOutput(input.UserId, projectsDto);
 
-        //TODO: TEST
+        
         return Result<GetUserProjectsOutput>.Success(output);
     }
 }

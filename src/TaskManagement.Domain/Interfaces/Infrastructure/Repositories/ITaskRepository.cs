@@ -11,4 +11,6 @@ public interface ITaskRepository
     Task UpdateAsync(Domain.Entities.Internal.Task task, CancellationToken cancellationToken);
 
     Task<long> CountTasksByProjectAsync(string projectId, CancellationToken cancellationToken);
+
+    Task<IEnumerable<Domain.Entities.Internal.Task>> GetTasksByProjectListAsync(IEnumerable<string> projectIds, CancellationToken cancellationToken);
 }

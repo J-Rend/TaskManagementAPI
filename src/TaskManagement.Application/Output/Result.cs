@@ -48,4 +48,9 @@ public class Result<T> where T : class
     {
         return new Result<T>(null, Enumerable.Empty<ValidationResult>(), ResultStatus.NotFound, null, null);
     }
+
+    public static Result<T> Forbidden()
+    {
+        return new Result<T>(null, Enumerable.Empty<ValidationResult>(), ResultStatus.Forbidden, null, null);
+    }
 }
