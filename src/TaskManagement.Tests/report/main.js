@@ -213,17 +213,17 @@ var assemblies = [
   {
     "name": "TaskManagement.Api",
     "classes": [
-      { "name": "Program", "rp": "TaskManagement.Api_Program.html", "cl": 0, "ucl": 15, "cal": 15, "tl": 29, "cb": 0, "tb": 2, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
-      { "name": "TaskManagement.Api.Controllers.Base.TaskManagementControllerBase", "rp": "TaskManagement.Api_TaskManagementControllerBase.html", "cl": 9, "ucl": 1, "cal": 10, "tl": 28, "cb": 6, "tb": 7, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "Program", "rp": "TaskManagement.Api_Program.html", "cl": 0, "ucl": 29, "cal": 29, "tl": 48, "cb": 0, "tb": 2, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "TaskManagement.Api.Controllers.Base.TaskManagementControllerBase", "rp": "TaskManagement.Api_TaskManagementControllerBase.html", "cl": 10, "ucl": 1, "cal": 11, "tl": 30, "cb": 7, "tb": 8, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
     ]},
   {
     "name": "TaskManagement.Application",
     "classes": [
-      { "name": "TaskManagement.Application.DTO.Project", "rp": "TaskManagement.Application_Project.html", "cl": 11, "ucl": 0, "cal": 11, "tl": 21, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "TaskManagement.Application.DTO.Project", "rp": "TaskManagement.Application_Project.html", "cl": 13, "ucl": 0, "cal": 13, "tl": 23, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "TaskManagement.Application.DTO.Task", "rp": "TaskManagement.Application_Task.html", "cl": 21, "ucl": 0, "cal": 21, "tl": 35, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "TaskManagement.Application.DTO.TaskChangeHistory", "rp": "TaskManagement.Application_TaskChangeHistory.html", "cl": 13, "ucl": 0, "cal": 13, "tl": 23, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "TaskManagement.Application.DTO.TaskComment", "rp": "TaskManagement.Application_TaskComment.html", "cl": 7, "ucl": 0, "cal": 7, "tl": 14, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
-      { "name": "TaskManagement.Application.Output.Result<T>", "rp": "TaskManagement.Application_Result_1.html", "cl": 31, "ucl": 0, "cal": 31, "tl": 51, "cb": 4, "tb": 4, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "TaskManagement.Application.Output.Result<T>", "rp": "TaskManagement.Application_Result_1.html", "cl": 34, "ucl": 0, "cal": 34, "tl": 56, "cb": 4, "tb": 4, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "TaskManagement.Application.UseCases.Project.CreateProject.CreateProjectHandler", "rp": "TaskManagement.Application_CreateProjectHandler.html", "cl": 18, "ucl": 0, "cal": 18, "tl": 42, "cb": 3, "tb": 4, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "TaskManagement.Application.UseCases.Project.CreateProject.CreateProjectInput", "rp": "TaskManagement.Application_CreateProjectInput.html", "cl": 7, "ucl": 0, "cal": 7, "tl": 13, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "TaskManagement.Application.UseCases.Project.CreateProject.CreateProjectOutput", "rp": "TaskManagement.Application_CreateProjectOutput.html", "cl": 5, "ucl": 0, "cal": 5, "tl": 11, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
@@ -232,6 +232,9 @@ var assemblies = [
       { "name": "TaskManagement.Application.UseCases.Project.GetUserProjects.GetUserProjectsOutput", "rp": "TaskManagement.Application_GetUserProjectsOutput.html", "cl": 7, "ucl": 0, "cal": 7, "tl": 13, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "TaskManagement.Application.UseCases.Project.RemoveProject.RemoveProjectHandler", "rp": "TaskManagement.Application_RemoveProjectHandler.html", "cl": 25, "ucl": 0, "cal": 25, "tl": 48, "cb": 4, "tb": 4, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "TaskManagement.Application.UseCases.Project.RemoveProject.RemoveProjectInput", "rp": "TaskManagement.Application_RemoveProjectInput.html", "cl": 5, "ucl": 0, "cal": 5, "tl": 11, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "TaskManagement.Application.UseCases.Reports.TaskReportByUser.TaskReportByUserHandler", "rp": "TaskManagement.Application_TaskReportByUserHandler.html", "cl": 23, "ucl": 0, "cal": 23, "tl": 46, "cb": 2, "tb": 2, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "TaskManagement.Application.UseCases.Reports.TaskReportByUser.TaskReportByUserInput", "rp": "TaskManagement.Application_TaskReportByUserInput.html", "cl": 9, "ucl": 0, "cal": 9, "tl": 15, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "TaskManagement.Application.UseCases.Reports.TaskReportByUser.TaskReportByUserOutput", "rp": "TaskManagement.Application_TaskReportByUserOutput.html", "cl": 17, "ucl": 0, "cal": 17, "tl": 24, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "TaskManagement.Application.UseCases.Task.CreateTask.CreateTaskHandler", "rp": "TaskManagement.Application_CreateTaskHandler.html", "cl": 32, "ucl": 0, "cal": 32, "tl": 58, "cb": 7, "tb": 8, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "TaskManagement.Application.UseCases.Task.CreateTask.CreateTaskInput", "rp": "TaskManagement.Application_CreateTaskInput.html", "cl": 15, "ucl": 0, "cal": 15, "tl": 26, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "TaskManagement.Application.UseCases.Task.CreateTask.CreateTaskOutput", "rp": "TaskManagement.Application_CreateTaskOutput.html", "cl": 5, "ucl": 0, "cal": 5, "tl": 11, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
@@ -246,12 +249,17 @@ var assemblies = [
       { "name": "TaskManagement.Application.UseCases.Task.UpdateTaskStatus.UpdateTaskStatusInput", "rp": "TaskManagement.Application_UpdateTaskStatusInput.html", "cl": 7, "ucl": 0, "cal": 7, "tl": 14, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
     ]},
   {
+    "name": "TaskManagement.CrossCutting",
+    "classes": [
+      { "name": "TaskManagement.CrossCutting.Resolvers.AuthenticationInfrastructureResolver", "rp": "TaskManagement.CrossCutting_AuthenticationInfrastructureResolver.html", "cl": 0, "ucl": 4, "cal": 4, "tl": 15, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+    ]},
+  {
     "name": "TaskManagement.Domain",
     "classes": [
       { "name": "TaskManagement.Domain.Entities.External.User", "rp": "TaskManagement.Domain_User.html", "cl": 7, "ucl": 0, "cal": 7, "tl": 13, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "TaskManagement.Domain.Entities.Internal.Base.Entity", "rp": "TaskManagement.Domain_Entity.html", "cl": 10, "ucl": 0, "cal": 10, "tl": 27, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "TaskManagement.Domain.Entities.Internal.Project", "rp": "TaskManagement.Domain_Project.html", "cl": 30, "ucl": 0, "cal": 30, "tl": 54, "cb": 4, "tb": 4, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
-      { "name": "TaskManagement.Domain.Entities.Internal.Task", "rp": "TaskManagement.Domain_Task.html", "cl": 86, "ucl": 0, "cal": 86, "tl": 139, "cb": 18, "tb": 18, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "TaskManagement.Domain.Entities.Internal.Task", "rp": "TaskManagement.Domain_Task.html", "cl": 88, "ucl": 0, "cal": 88, "tl": 142, "cb": 18, "tb": 18, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "TaskManagement.Domain.ValueObjects.TaskChangeHistory", "rp": "TaskManagement.Domain_TaskChangeHistory.html", "cl": 13, "ucl": 0, "cal": 13, "tl": 24, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "TaskManagement.Domain.ValueObjects.TaskComment", "rp": "TaskManagement.Domain_TaskComment.html", "cl": 7, "ucl": 0, "cal": 7, "tl": 14, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
     ]},

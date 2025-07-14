@@ -81,4 +81,15 @@ public class TaskManagementControllerBaseTests
         Assert.NotNull(response);
         Assert.IsType<NoContentResult>(response);
     }
+
+    [Fact]
+    public async Task WhenResultIsForbidden_ShouldReturn_ForbiddenResult()
+    {
+        var result = Result<TestExampleModel>.Forbidden();
+
+        var response = _controller.SendResponseTestMethod(result);
+
+        Assert.NotNull(response);
+        Assert.IsType<ForbidResult>(response);
+    }
 }

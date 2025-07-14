@@ -15,13 +15,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TaskManagement.Tests", "..\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TaskManagement.CrossCutting", "..\TaskManagement.CrossCutting\TaskManagement.CrossCutting.csproj", "{9C2F2DFE-7B03-4453-BA85-8751B6A481DF}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Others", "Others", "{00763D91-7591-489A-8636-C5CB1AE648F3}"
-	ProjectSection(SolutionItems) = preProject
-		DuvidasPO.txt = DuvidasPO.txt
-		MelhoriasTecnicas.txt = MelhoriasTecnicas.txt
-	EndProjectSection
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskManagement.Infrastructure.Permissioning", "..\TaskManagement.Infrastructure.Permissioning\TaskManagement.Infrastructure.Permissioning.csproj", "{D94448FB-5B6A-4343-9543-1F5AB7F48DEB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TaskManagement.Infrastructure.Permissioning", "..\TaskManagement.Infrastructure.Permissioning\TaskManagement.Infrastructure.Permissioning.csproj", "{D94448FB-5B6A-4343-9543-1F5AB7F48DEB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

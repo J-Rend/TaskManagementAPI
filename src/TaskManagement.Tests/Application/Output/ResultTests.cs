@@ -62,4 +62,14 @@ public class ResultTests
         Assert.Equal(ResultStatus.NotFound, result.Status);
         Assert.Null(result.Data);
     }
+
+    [Fact]
+    public async Task WhenResultForbiddenMethodIsInvoked_ShouldReturnResultNotFoundStatus()
+    {
+        var result = Result<TestExampleModel>.Forbidden();
+
+        Assert.NotNull(result);
+        Assert.Equal(ResultStatus.Forbidden, result.Status);
+        Assert.Null(result.Data);
+    }
 }

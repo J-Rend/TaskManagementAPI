@@ -22,7 +22,7 @@ public abstract class TaskManagementControllerBase : ControllerBase
             case ResultStatus.ServerError:
                 return StatusCode(500, result.ServerErrorMessage);
             case ResultStatus.Forbidden:
-                return Unauthorized();
+                return Forbid();
             default:
                 return StatusCode(500, "An unexpected error occurred.");
         }

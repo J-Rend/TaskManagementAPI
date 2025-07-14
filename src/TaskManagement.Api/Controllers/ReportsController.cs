@@ -21,7 +21,7 @@ public class ReportsController : TaskManagementControllerBase
     /// <param name="request">Parâmetros do relatório (datas e identificador do usuário).</param>
     /// <param name="cancellationToken">Token de cancelamento.</param>
     /// <returns>Relatório de tarefas realizadas pelo usuário.</returns>
-    [Authorize(Roles = "Manager")]
+    [Authorize(Roles = "Manager,Gerente")]
     [HttpGet("tasks-by-user")]
     [ProducesResponseType(typeof(TaskReportByUserOutput), StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
