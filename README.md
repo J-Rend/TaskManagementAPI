@@ -15,17 +15,17 @@
 
 === DETALHES DE IMPLEMENTAÇÃO DO PROJETO ===
 
--Banco de dados utilizado: MongoDB
+- Banco de dados utilizado: MongoDB
 
--O projeto usou como referência arquitetural a Onion Architecture;
+- O projeto usou como referência arquitetural a Onion Architecture;
 
--A API está desenhada como RESTful respeitando todas as convenções adotadas;
+- A API está desenhada como RESTful respeitando todas as convenções adotadas, incluindo organização por resources;
 
--Foi adotado o pattern de Use Case para encapsular a responsabilidade a implementação de cada endpoint em um Use Case Handler;
+- Foi adotado o pattern de Use Case para encapsular a responsabilidade a implementação de cada endpoint em um Use Case Handler;
 
--Foi adotado o pattern Repository para encapsular as consultas a bancos de dados;
+- Foi adotado o pattern Repository para encapsular as consultas a bancos de dados;
 
--O sistema não possui sistema de autenticação, sendo necessário apenas informar o 'X-User-Id' e 'X-User-Role na requisição' para promover a rastreabilidade solicitada no desafio
+- O sistema não possui sistema de autenticação, sendo necessário apenas informar o 'X-User-Id' e 'X-User-Role na requisição' para promover a rastreabilidade solicitada no desafio
     (Ainda se fez necessário implementação de sistema de Autorização)
     (A propriedade 'X-User-Id' é necessária em algumas requisições para poder fazer o vínculo com as demais entidades do projeto)
 
@@ -59,21 +59,21 @@
 
 1- Pre-requisitos para executar o projeto:
 
--Ter um container com a imagem do MongoDB executando na máquina com a porta default configurada: 'mongodb://host.docker.internal:27017' ou 'mongodb://localhost:27017' se estiver executando a aplicação fora de um container Docker;
+- Ter um container com a imagem do MongoDB executando na máquina com a porta default configurada: 'mongodb://host.docker.internal:27017' ou 'mongodb://localhost:27017' se estiver executando a aplicação fora de um container Docker;
 
--Ter a database 'TaskManagementDatabase' criada no MongoDB;
+- Ter a database 'TaskManagementDatabase' criada no MongoDB;
 
 2- Passo a passo para execução do projeto:
 
--Entrar na pasta onde o se encontra o Dockerfile do projeto '/TaskManagementAPIs/src/';
+- Entrar na pasta onde o se encontra o Dockerfile do projeto '/TaskManagementAPIs/src/';
 
--Executar o comando "docker build -t taskmanagement-api ." para gerar a Docker image;
+- Executar o comando "docker build -t taskmanagement-api ." para gerar a Docker image;
 
--Executar o comando "docker run -d -p 5000:8080 --name taskmanagement-api taskmanagement-api" para executar o container localmente usando a Docker image recém gerada da API.
+- Executar o comando "docker run -d -p 5000:8080 --name taskmanagement-api taskmanagement-api" para executar o container localmente usando a Docker image recém gerada da API.
 
--Acessar o endereço 'http://localhost:5000/swagger'
+- Acessar o endereço 'http://localhost:5000/swagger'
 
--Ao acessar o endereço informado deverá abrir a página inicial do Swagger
+- Ao acessar o endereço informado deverá abrir a página inicial do Swagger
 
 
 === TEST COVERAGE ===
