@@ -1,3 +1,5 @@
+Desafio técnico proposto pela Skopia Digital com o objetivo de validar conhecimentos de arquitetura e conhecimentos em APIs Restful
+
 === REFINAMENTO - DUVIDAS PARA O PO ===
 
 1- Faz sentido pensarmos em atribuir usuarios as Tasks ao invés de atribui-los aos projetos? Penso que dessa forma damos a opção para o usuario dividir as tarefas numa granularidade menor.
