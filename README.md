@@ -15,6 +15,7 @@
 
 === DETALHES DE IMPLEMENTAÇÃO DO PROJETO ===
 
+-Banco de dados utilizado: MongoDB
 
 -O projeto usou como referência arquitetural a Onion Architecture;
 
@@ -59,6 +60,8 @@
 1- Pre-requisitos para executar o projeto:
 
 -Ter um container com a imagem do MongoDB executando na máquina com a porta default configurada: 'mongodb://host.docker.internal:27017' ou 'mongodb://localhost:27017' se estiver executando a aplicação fora de um container Docker;
+
+-Ter a database 'TaskManagementDatabase' criada no MongoDB;
 
 2- Passo a passo para execução do projeto:
 
